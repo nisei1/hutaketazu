@@ -35,6 +35,19 @@
                   <td><%= @post.artist %></td>
                 </tr>
               </table>
+              <% if user_signed_in? %>
+                <% if current_user.already_liked?(@post) %>
+                    <%= link_to post_like_path(@post), method: :delete do %>
+                      <i class="fas fa-heart"></i><%= @post.likes.count %>
+                    <% end %>
+                <% else %>
+                    <%= link_to post_likes_path(@post), method: :post do %>
+                      <i class="far fa-heart"></i><%= @post.likes.count %>
+                    <% end %>
+                <% end %>
+              <% else %>
+                <i class="far fa-heart"></i><%= @post.likes.count %>
+              <% end %>              
               <% if @post.user.id == current_user.id %>
                 <%= link_to "編集画面へ", edit_post_path(@post), class: "button is-success" %>
               <% end %>
