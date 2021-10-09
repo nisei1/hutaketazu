@@ -1,21 +1,3 @@
-<div class="tabs">
-  <input id="all" type="radio" name="tab_item" checked>
-  <label class="tab_item" for="all">Favorite</label>
-  <input id="programming" type="radio" name="tab_item">
-  <label class="tab_item" for="programming">My lylics</label>
-  <div class="tab_content" id="all_content">
-    <div class="tab_content_description">
-      <p class="c-txtsp">総合の内容が</p>
-    </div>
-  </div>
-  <div class="tab_content" id="programming_content">
-    <div class="tab_content_description">
-      <p class="c-txtsp">プログラミングの内容がここに入ります</p>
-    </div>
-  </div>
-</div>
-
-
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
@@ -44,45 +26,53 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="columns is-multiline">
-      <% @user.posts.each do |post| %>
-        <div class="column is-4">
-          <div class="card">
-            <%= post.title %>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <%= link_to post_path(post), class: "panel-block" do %>
-                    <span class="panel-icon">
-                      <i class="fas fa-book" aria-hidden="true"></i>
-                    </span>
-                    この投稿を見る
-                  <% end %>
-                  <% if @user.id == current_user.id %>
-                    <%= link_to edit_post_path(post), class: "panel-block" do %>
-                      <span class="panel-icon">
-                        <i class="fas fa-edit"></i>
-                      </span>
-                      この投稿を編集する
-                    <% end %>
-                    <%= link_to post_path(post), method: :delete, data: {confirm: "削除しますか？"}, class: "panel-block" do %>
-                      <span class="panel-icon">
-                        <i class="fas fa-trash"></i>
-                      </span>
-                      この投稿を削除する
-                    <% end %>
-                  <% end %>
+<div class="tabs">
+  <input id="all" type="radio" name="tab_item" checked>
+  <label class="tab_item" for="all">Favorite</label>
+  <input id="programming" type="radio" name="tab_item">
+  <label class="tab_item" for="programming">My lylics</label>
+  <div class="tab_content" id="all_content">
+      総合の内容が
+  </div>
+  <div class="tab_content" id="programming_content">
+        <div class="columns is-multiline">
+          <% @user.posts.each do |post| %>
+            <div class="column is-4">
+              <div class="card">
+                <%= post.title %>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <%= link_to post_path(post), class: "panel-block" do %>
+                        <span class="panel-icon">
+                          <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        この投稿を見る
+                      <% end %>
+                      <% if @user.id == current_user.id %>
+                        <%= link_to edit_post_path(post), class: "panel-block" do %>
+                          <span class="panel-icon">
+                            <i class="fas fa-edit"></i>
+                          </span>
+                          この投稿を編集する
+                        <% end %>
+                        <%= link_to post_path(post), method: :delete, data: {confirm: "削除しますか？"}, class: "panel-block" do %>
+                          <span class="panel-icon">
+                            <i class="fas fa-trash"></i>
+                          </span>
+                          この投稿を削除する
+                        <% end %>
+                      <% end %>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <time><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
+                  </div>
                 </div>
               </div>
-              <div class="content">
-                <time><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
-              </div>
             </div>
-          </div>
+          <% end %>
         </div>
-      <% end %>
-    </div>
+
   </div>
-</section>
+</div>
