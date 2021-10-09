@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -61,7 +62,7 @@
       <% else %>
         <div id="navbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
-            <%= link_to "レシピ一覧", recipes_path, class: "navbar-item button is-warning is-light" %>
+            <%= link_to "レシピ一覧", posts_path, class: "navbar-item button is-warning is-light" %>
           </div>
           <div class="navbar-item">
             <%= link_to "レシピグラマー一覧", users_path, class: "navbar-item button is-warning is-light" %>
