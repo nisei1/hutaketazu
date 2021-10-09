@@ -28,7 +28,7 @@
                 <time><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
                 <% if user_signed_in? %>
                   <% if current_user.already_liked?(post) %>
-                      <%= link_to post_like_path(id: post.id, post_id: post.id), method: :delete do %>
+                      <%= link_to post_likes_path(id: post.id, post_id: post.id), method: :delete do %>
                         <i class="fas fa-heart"></i><%= post.likes.count %>
                       <% end %>
                   <% else %>
