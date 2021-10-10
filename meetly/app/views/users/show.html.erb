@@ -32,7 +32,6 @@
   <input id="programming" type="radio" name="tab_item">
   <label class="tab_item" for="programming">My lylics</label>
   <div class="tab_content" id="all_content">
-    <p>Favorite</p>
     <section class="section">
       <div class="container">
         <div class="columns is-multiline">
@@ -54,24 +53,19 @@
                     <%# ここまで　%>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
           <% end %>
         </div>
-    </section>
+      </section>
   </div>
   <div class="tab_content" id="programming_content">
-    <p>My lyrics</p>
-    
     <section class="section">
-    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 150 ,"gutter": 10}'>
-      <div class="container">
-      
-        <div class="columns is-multiline">
-          <% @user.posts.each do |post| %>
-            
+      <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 150 ,"gutter": 10}'>
+        <div class="container">
+          <div class="columns is-multiline">
+            <% @user.posts.each do |post| %>
               <div class="grid-item">
                 <div class="card">
                   <%= post.title %>
@@ -102,10 +96,10 @@
                   </div>
                 </div>
               </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </div>
