@@ -78,5 +78,14 @@
 
     </nav>
     <%= yield %>
+    <script>
+    document.onload = function() {
+        new Masonry('.grid', {
+          itemSelector: '.grid-item',
+          columnWidth: 150,
+          gutter: 10
+        });
+      };
+    </script>
   </body>
 </html>
