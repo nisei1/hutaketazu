@@ -41,7 +41,7 @@
             <%= link_to "レシピ一覧", posts_path, class: "navbar-item button is-warning is-light" %>
           </div>
           <div class="navbar-item">
-            <%= link_to "レシピ投稿", new_post_path, class: "navbar-item button is-warning is-light" %>
+            <%= link_to "レシピ投稿", new_post_path, class: "navbar-item button" %>
           </div>
 
           <div class="navbar-end">
@@ -85,5 +85,14 @@
 
     </nav>
     <%= yield %>
+    <script>
+    document.onload = function() {
+        new Masonry('.grid', {
+          itemSelector: '.grid-item',
+          columnWidth: 150,
+          gutter: 10
+        });
+      };
+    </script>
   </body>
 </html>

@@ -32,7 +32,6 @@
   <input id="programming" type="radio" name="tab_item">
   <label class="tab_item" for="programming">My lylics</label>
   <div class="tab_content" id="all_content">
-    <p>Favorite</p>
     <section class="section">
       <div class="container">
         <div class="columns is-multiline">
@@ -63,49 +62,24 @@
     </section>
   </div>
   <div class="tab_content" id="programming_content">
-    <p>My lyrics</p>
-    
     <section class="section">
-    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 150 ,"gutter": 10}'>
-      <div class="container">
-      
-        <div class="columns is-multiline">
+      <div class="grid">
           <% @user.posts.each do |post| %>
-            
               <div class="grid-item">
                 <div class="card">
                   <%= post.title %>
                   <div class="card-content">
                     <div class="media">
                       <div class="media-content">
-                      <div class="title"><%= post.title%></div>
-                      <div class="title"><%=post.lyrics%></div>
-                      <div class="title"><%=post.artist%></div>
-                      <%# アイコン　%>
-                      <span class="panel-icon">
-                        <span class="fas fa-book" aria-hidden="true"></span>
-                        <%= link_to post_path(post) do %><% end %>
-                      </span>
-                      <% if @user.id == current_user.id %>
-                        <span class="panel-icon">
-                          <span class="fas fa-edit"></span>
-                          <%= link_to edit_post_path(post) do %><% end %>
-                        </span>
-                        <span class="panel-icon">
-                          <span class="fas fa-trash"></span>
-                          <%= link_to post_path(post), method: :delete, data: {confirm: "削除しますか？"} do %><% end %>
-                        </span>
-                      <% end %>
-                      <%# ここまで　%>
+                        <div class="title"><%= post.title%></div>
+                        <div class ="title"><%=post.lyrics%></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
           <% end %>
         </div>
       </section>
     </div>
-  </div>
 </div>
