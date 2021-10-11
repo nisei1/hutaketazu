@@ -43,6 +43,7 @@
                   <div class="media">
                     <div class="media-content">
                     <div class="title"><%=link_to like.post.title, post_path(like.post) %></div>
+                    <div class ="title"><b><%=like.post.lyrics%></b></div>
                     <%# アイコン　%>
                     <span class="panel-icon">
                         <%= link_to post_likes_path(id: like.post.id, post_id: like.post.id), method: :delete, data: {confirm: "削除しますか？"} do %>
@@ -61,25 +62,23 @@
   </div>
   <div class="tab_content" id="programming_content">
     <section class="section">
-      <div class="grid" data-masonry='{ "itemSelector": ".grid-item" ,"gutter": 10 ,"fitWidth": true}'>
+      <div class="grid" data-masonry='{ "itemSelector": ".grid-item" ,"gutter":20 ,"fitWidth": false}'>
           <% @user.posts.each do |post| %>
               <div class="grid-item">
                 <div class="card">
                   <div class="card-content">
                     <div class="media">
                       <div class="media-content">
-                        <div class = "kyokumei"><b><%= post.title%></b></div>
-                        <div class ="lyrics"><b><%=post.lyrics%></b></div>
-                        <div class ="artist"><b><%=post.artist%></b></div>
+                        <div class = "Subtitle 4"><b><%= post.title%></b></div>
+                        <div class ="title"><b><%=post.lyrics%></b></div>
+                        <div class ="Subtitle 4"><b><%=post.artist%></b></div>
                         <%# アイコン　%>
                         <div>
                           <span class="panel-icon">
-                            
                             <%= link_to post_path(post) do %><span class="fas fa-book" aria-hidden="true"></span><% end %>
                           </span>
                           <% if @user.id == current_user.id %>
-                            <span class="panel-icon">
-                              
+                            <span class="panel-icon">  
                               <%= link_to edit_post_path(post) do %><span class="fas fa-edit"></span><% end %>
                             </span>
                             <span class="panel-icon">
