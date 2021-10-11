@@ -20,10 +20,10 @@
   .tab_item {
     width: 50%;
     height: 50px;
-    border-bottom: 3px solid #5ab4bd;
+    border-bottom: 3px solid #808080;
     background-color: #d9d9d9;
     line-height: 50px;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     color: #565656;
     display: block;
@@ -64,10 +64,32 @@
 
   /*選択されているタブのスタイルを変える*/
   .tabs input:checked + .tab_item {
-    background-color: #5ab4bd;
+    background-color: #808080;
     color: #fff;
   }
   .grid-item {
-
+    margin: 0 auto;
     margin-bottom: 10px;
+  }
+
+  .kyokumei {
+    font-size: 18px;
+    line-height:30px;
+    text-align: center;
+  }
+
+  .lyrics{
+    font-size: 25px;
+    line-height:40px;
+    text-align: center;
+  }
+
+  .artist{
+    font-size: 18px;
+    line-height:30px;
+    text-align: center;
+  }
+
+  .panel-icon{
+    line-height:30px;
   }
