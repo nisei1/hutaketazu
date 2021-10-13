@@ -22,7 +22,7 @@ var App = {
         var animate = liked ? 'animateYes' : 'animateNo';
         var self = this;
         Person.add();
-        if (!this.blocked && liked == true) {
+        if (!this.blocked && liked == true) { //ハートを押されたとき
             this.blocked = true;
             $('.person').eq(0).addClass(animate).one(animationEndEvent, function() {
                 console.log($(this).data('id')); //ここのthisは $('.person').eq(0) のこと
@@ -40,7 +40,7 @@ var App = {
                 $(this).remove();
                 self.blocked = false;
             });
-        } else if (liked == false) {
+        } else if (liked == false) { //バツを押されたとき
             this.blocked = true;
             $('.person').eq(0).addClass(animate).one(animationEndEvent, function() {
                 $(this).remove();
