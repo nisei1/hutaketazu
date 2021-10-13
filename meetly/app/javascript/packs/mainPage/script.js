@@ -22,7 +22,7 @@ var App = {
         var animate = liked ? 'animateYes' : 'animateNo';
         var self = this;
         Person.add();
-        if (!this.blocked) {
+        if (!this.blocked && liked == true) {
             this.blocked = true;
             $('.person').eq(0).addClass(animate).one(animationEndEvent, function() {
                 console.log($(this).data('id')); //ここのthisは $('.person').eq(0) のこと
@@ -31,24 +31,27 @@ var App = {
                         // alert("second success");
                     })
                     .fail(function() {
-                        // alert("error");
+                        alert("error");
                     })
                     .always(function() {
                         // alert("finished");
-                        $(this).remove();
-                        self.blocked = false;
-                    });
 
+                    });
+                $(this).remove();
+                self.blocked = false;
+            });
+        } else if (liked == false) {
+            this.blocked = true;
+            $('.person').eq(0).addClass(animate).one(animationEndEvent, function() {
+                $(this).remove();
+                self.blocked = false;
             });
         }
-
     }
 };
 
 App.yesButton.on('mousedown', function() {
     App.like(true);
-
-
 });
 
 App.noButton.on('mousedown', function() {
