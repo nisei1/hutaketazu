@@ -1,5 +1,5 @@
 current directory: C:/Users/integ/hutaketazu/meetly/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/ext/bootsnap
-C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20211009-1748-b515yh.rb extconf.rb
+C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20211013-20284-vx60et.rb extconf.rb
 creating Makefile
 
 current directory: C:/Users/integ/hutaketazu/meetly/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/ext/bootsnap
@@ -13,4 +13,4 @@ linking shared-object bootsnap/bootsnap.so
 
 current directory: C:/Users/integ/hutaketazu/meetly/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/ext/bootsnap
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20211009-1748-r9djnv/bootsnap
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20211013-20284-fehqau/bootsnap

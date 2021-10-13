@@ -1,5 +1,5 @@
 current directory: C:/Users/integ/hutaketazu/meetly/vendor/bundle/ruby/3.0.0/gems/nio4r-2.5.8/ext/nio4r
-C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20211009-1748-sh6ks5.rb extconf.rb
+C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20211013-20284-ku595n.rb extconf.rb
 
 current directory: C:/Users/integ/hutaketazu/meetly/vendor/bundle/ruby/3.0.0/gems/nio4r-2.5.8/ext/nio4r
 make DESTDIR\= clean

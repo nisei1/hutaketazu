@@ -1,5 +1,5 @@
 current directory: C:/Users/integ/hutaketazu/meetly/vendor/bundle/ruby/3.0.0/gems/puma-4.3.8/ext/puma_http11
-C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20211009-1748-h2nm83.rb extconf.rb
+C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20211013-20284-xknjcn.rb extconf.rb
 checking for whether -D_FORTIFY_SOURCE=2 is accepted as CFLAGS... yes
 checking for whether -fstack-protector is accepted as LDFLAGS... yes
 checking for -lssp... yes
@@ -25,4 +25,4 @@ linking shared-object puma/puma_http11.so
 
 current directory: C:/Users/integ/hutaketazu/meetly/vendor/bundle/ruby/3.0.0/gems/puma-4.3.8/ext/puma_http11
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20211009-1748-i0cpez/puma
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20211013-20284-agk33n/puma
