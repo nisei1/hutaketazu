@@ -7,25 +7,10 @@ var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanim
 
 var Person = {
     wrap: $('#people'),
-    people: [{
-            lyrics: 'lyrics1'
-        },
-        {
-            lyrics: 'lyrics2'
-        },
-        {
-            lyrics: 'lyrics3'
-        },
-        {
-            lyrics: 'lyrics4'
-        },
-        {
-            lyrics: 'lyrics5'
-        },
-    ],
+    people: $('#posts').data('posts'),
     add: function() {
         var random = this.people[Math.floor(Math.random() * this.people.length)];
-        this.wrap.append("<div class='person'><strong>" + random.lyrics + "</strong></div>");
+        this.wrap.append("<div class='person' data-id='" + random.id + "'><strong>" + random.lyrics + "</strong></div>");
     }
 }
 
@@ -40,15 +25,30 @@ var App = {
         if (!this.blocked) {
             this.blocked = true;
             $('.person').eq(0).addClass(animate).one(animationEndEvent, function() {
-                $(this).remove();
-                self.blocked = false;
+                console.log($(this).data('id')); //ここのthisは $('.person').eq(0) のこと
+                var jqxhr = $.post("/like", { post_id: $(this).data('id') })
+                    .done(function() {
+                        // alert("second success");
+                    })
+                    .fail(function() {
+                        // alert("error");
+                    })
+                    .always(function() {
+                        // alert("finished");
+                        $(this).remove();
+                        self.blocked = false;
+                    });
+
             });
         }
+
     }
 };
 
 App.yesButton.on('mousedown', function() {
     App.like(true);
+
+
 });
 
 App.noButton.on('mousedown', function() {
