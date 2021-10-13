@@ -67,29 +67,29 @@
     background-color: #808080;
     color: #fff;
   }
+
   .grid-item {
+    float: left;
+    width: 280px;
     margin: 0 auto;
     margin-bottom: 10px;
   }
 
-  .kyokumei {
-    font-size: 18px;
-    line-height:30px;
-    text-align: center;
+  .grid{
+    width: 100%;
   }
 
-  .lyrics{
-    font-size: 25px;
-    line-height:40px;
-    text-align: center;
-  }
-
-  .artist{
-    font-size: 18px;
-    line-height:30px;
-    text-align: center;
-  }
 
   .panel-icon{
     line-height:30px;
+  }
+
+  .card{
+    display: inline-block;
+    overflow-wrap: break-all;
+    white-space: pre-line;
+  }
+
+  .media-content{
+    width:100%;
   }
