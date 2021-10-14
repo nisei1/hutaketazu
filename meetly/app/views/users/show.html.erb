@@ -1,26 +1,6 @@
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script><section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="columns is-centered">
-          <div class="column is-8">
-            <table class="table is-fullwidth">
-              <tr>
-                <td class="is-size-4">
-                  <strong><%= @user.username %></strong>
-                </td>
-                <% if @user.id == current_user.id %>
-                <td>
-                  <%= link_to "編集", edit_user_path(@user), class: "button is-light" %>
-                </td>
-                <% end %>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<section class="section">
+  <p class= "username"><%= @user.username %></p>
 </section>
 
 <div class="tabs">
