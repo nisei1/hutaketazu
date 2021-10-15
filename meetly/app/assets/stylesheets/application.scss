@@ -14,13 +14,10 @@
  *= require_self
  */
 
-@import "bulma";
-.notification:not(:last-child){
-    margin-bottom: 0;
-}
-
-
-
+//  @import "bulma";
+//  .notification:not(:last-child){
+//      margin-bottom: 0;
+//  }
 
 /* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
@@ -31,6 +28,11 @@
   font-family: 'FontAwesome', sans-serif;
 }
 
+.html{
+  background-color: #e9e9e9;
+}
+
+// ログイン画面のボックス
 /* Simple Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -115,12 +117,41 @@ h1 {
 .form-footer a:hover {
   border-bottom: 1px dotted #8c8c8c;
 }
+//ここまでlog in
 
-.html{
-    background-color: #8c8c8c;
+//flashの色
+.notice{
+  background-color: #666;
+}
+.alert{
+  background-color: #f16272;
+}
+//ここまで
+
+/*ここからヘッダー*/
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+    position: absolute;
+    width: 100%;
+    left: 10px;
+    top: 10px;
+    text-align:left;
+    margin: auto;
 }
 
+.nav-item strong{
+  font-size: medium;
+  padding: 15px 7px;
+  line-height:2rem;
+  font-family: 'Scheherazade New', serif;
+}
 
+//エラーの時のクラス
+.notification{
+  background-color: #f16272;
+}
 
 
 

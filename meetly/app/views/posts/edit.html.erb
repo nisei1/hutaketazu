@@ -1,4 +1,4 @@
-<section class="hero is-success">
+<section class="hero">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
@@ -9,7 +9,7 @@
 </section>
 
 <% if @post.errors.any? %>
-  <div class="notification is-danger">
+  <div class="notification">
     <h2><%= pluralize(@post.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
     <ul>
       <% @post.errors.full_messages.each do |message| %>
@@ -39,7 +39,7 @@
             <%= f.text_field :artist, class: "input" %>
           </div>
 
-          <%= f.submit '更新', class: "button is-success" %>
+          <%= f.submit '更新', class: "button is-light" %>
         <% end %>
       </div>
     </div>

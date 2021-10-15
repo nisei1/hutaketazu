@@ -1,5 +1,9 @@
+
+
+
+
 <% if @post.errors.any? %>
-  <div class="notification is-danger">
+  <div class="notification">
     <h2><%= pluralize(@post.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
     <ul>
       <% @post.errors.full_messages.each do |message| %>
@@ -9,29 +13,23 @@
   </div>
 <% end %>
 
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-6">
-        <%= form_for @post do |f| %>
-          <div class="field">
-            <%= f.label :title, "曲名", class: "label" %>
-            <%= f.text_field :title, class: "input" %>
-          </div>
-
-          <div class="field">
-            <%= f.label :artist, "歌手名(任意)", class: "label" %>
-            <%= f.text_field :artist, class: "input" %>
-          </div>
-
-          <div class="field">
-            <%= f.label :lyrics, "歌詞 ※5文字以上入力してください", class: "label" %>
-            <%= f.text_area :lyrics, class: "textarea" %>
-          </div>
-
-          <%= f.submit 'Post', class: "button is-light" %>
-        <% end %>
-      </div>
+<div class = "post">
+  <%= form_for @post do |f| %>
+    <div class="form">
+      <%= f.label :title, "曲名", class: "label" %>
+      <%= f.text_field :title, class: "input" %>
     </div>
-  </div>
-</section>
+
+    <div class="form">
+      <%= f.label :artist, "歌手名(任意)", class: "label" %>
+      <%= f.text_field :artist, class: "input" %>
+    </div>
+
+    <div class="form">
+      <%= f.label :lyrics, "歌詞 ※5文字以上入力してください", class: "label" %>
+      <%= f.text_area :lyrics, class: "textarea" %>
+    </div>
+    <%= f.submit 'Post', class: "button " %>
+  <% end %>
+</div>
+

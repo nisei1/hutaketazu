@@ -1,4 +1,4 @@
-<section class="hero is-success">
+<section class="hero">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
@@ -49,7 +49,7 @@
                 <i class="far fa-heart"></i><%= @post.likes.count %>
               <% end %>
               <% if @post.user.id == current_user.id %>
-                <%= link_to "編集画面へ", edit_post_path(@post), class: "button is-success" %>
+                <%= link_to "編集画面へ", edit_post_path(@post), class: "button is-light" %>
               <% end %>
             </div>
           </div>
@@ -57,7 +57,7 @@
       </div>
 
       <div class="column is-4">
-        <article class="panel is-link">
+        <article class="panel">
           <p class="panel-heading">
             By <%= @post.user.username %>
           </p>

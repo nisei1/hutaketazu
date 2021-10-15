@@ -30,6 +30,7 @@
     text-align: center;
     font-weight: bold;
     transition: all 0.2s ease;
+    margin-bottom: 0;
   }
 
   .tab_item:hover {
@@ -93,12 +94,13 @@
     width:100%;
   }
 
-  .section{
-    background-color: whitesmoke;
-  }
-  .tab_content{
-    background-color: whitesmoke;
-  }
+  // .section{
+  //   background-color: whitesmoke;
+  // }
+
+  // .tab_content{
+  //   background-color: whitesmoke;
+  // }
 
   .username{
     font-size: 25px;
