@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
-  protect_from_forgery except: :like  
+  protect_from_forgery except: :like
   def index
-    @posts=Post.all.to_json # allをwhere()へ変えたい
+    @posts = Post.find_by_sql("select * from posts where not user_id = #{current_user.id} and id not in (select post_id from likes where user_id = #{current_user.id})").to_json
+    logger.debug(@posts)
   end
 
   def like
