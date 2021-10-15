@@ -1,7 +1,8 @@
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<section class="section">
-  <p class= "username"><%= @user.username %></p>
-</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/func.js"></script>
 
 <div class="tabs">
   <input id="all" type="radio" name="tab_item" checked>
@@ -10,67 +11,62 @@
   <label class="tab_item" for="programming" style="font-family: 'Scheherazade New', serif;">My lyrics</label>
   <div class="tab_content" id="all_content">
     <section class="section">
-      <div class="container">
-        <div class="columns is-multiline">
-          <% @user.likes.each do |like| %>
-            <div class="column is-4">
-              <div class="card">
-                <%= like.post.title %>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-content">
-                    <div class="title"><%=link_to like.post.title, post_path(like.post) %></div>
+      <div class="grid" data-masonry='{ "itemSelector": ".grid-item" ,"gutter":20 ,"fitWidth": false}'>
+        <% @user.likes.each do |like| %>
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <div class="subtitle"><b><%=like.post.title%></b></div>
                     <div class ="title"><b><%=like.post.lyrics%></b></div>
+                    <div class ="subtitle"><b><%=like.post.artist%></b></div>
                     <%# アイコン　%>
-                    <span class="panel-icon">
-                        <%= link_to post_likes_path(id: like.post.id, post_id: like.post.id), method: :delete, data: {confirm: "削除しますか？"} do %>
-                          <i class="fas fa-heart"></i>
-                        <% end %>
+                    <span class="favorite-icon">
+                      <%= link_to post_likes_path(id: like.post.id, post_id: like.post.id), method: :delete, data: {confirm: "削除しますか？"} do %>
+                        <i class="fas fa-heart"></i>
+                      <% end %>
                     </span>
                     <%# ここまで　%>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          <% end %>
-        </div>
-      </section>
+          </div>
+        <% end %>
+      </div>
+    </section>
   </div>
   <div class="tab_content" id="programming_content">
     <section class="section">
-      <div class="grid" data-masonry='{ "itemSelector": ".grid-item" ,"gutter":20 ,"fitWidth": false}'>
-          <% @user.posts.each do |post| %>
-              <div class="grid-item">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="media">
-                      <div class="media-content">
-                        <div class = "Subtitle 4"><b><%= post.title%></b></div>
-                        <div class ="title"><b><%=post.lyrics%></b></div>
-                        <div class ="Subtitle 4"><b><%=post.artist%></b></div>
-                        <%# アイコン　%>
-                        <div>
-                          <span class="panel-icon">
-                            <%= link_to post_path(post) do %><span class="fas fa-book" aria-hidden="true"></span><% end %>
-                          </span>
-                          <% if @user.id == current_user.id %>
-                            <span class="panel-icon">  
-                              <%= link_to edit_post_path(post) do %><span class="fas fa-edit"></span><% end %>
-                            </span>
-                            <span class="panel-icon">
-                              <%= link_to post_path(post), method: :delete, data: {confirm: "削除しますか？"} do %><span class="fas fa-trash"></span><% end %>
-                            </span>
-                          <% end %>
-                        </div>
-                        <%# ここまで　%>
-                      </div>
+      <div class="flexbox">
+        <% @user.posts.each do |post| %>
+          <div class="item">
+            <div class="card">
+              <div class="card-content">
+                <span class = "detail-icon">
+                  <%= link_to post_path(post) do %><span class="fas fa-book" aria-hidden="true"></span><% end %>
+                </span>
+                <% if @user.id == current_user.id %>
+                  <span class = "edit-icon">
+                    <%= link_to edit_post_path(post) do %><span class="fas fa-edit"></span><% end %>
+                  </span>
+                  <div class="media">
+                    <div class="media-content">
+                      <div class = "Subtitle"><b><%= post.title%></b></div>
+                      <div class ="title"><b><%=post.lyrics%></b></div>
+                      <div class ="Subtitle"><b><%=post.artist%></b></div>
+                        <span class = "trash-icon">
+                          <%= link_to post_path(post), method: :delete, data: {confirm: "削除しますか？"} do %><span class="fas fa-trash"></span><% end %>
+                        </span>
                     </div>
                   </div>
-                </div>
+                <% end %>
               </div>
-          <% end %>
-        </div>
-      </section>
-    </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </section>
+  </div>
 </div>
