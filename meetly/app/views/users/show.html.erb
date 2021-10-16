@@ -11,24 +11,21 @@
   <label class="tab_item" for="programming" style="font-family: 'Scheherazade New', serif;">My lyrics</label>
   <div class="tab_content" id="all_content">
     <section class="section">
-      <div class="grid" data-masonry='{ "itemSelector": ".grid-item" ,"fitWidth": false}'>
+      <div class="flexbox">
         <% @user.likes.each do |like| %>
-          <div class="grid-item">
+          <div class="item">
             <div class="card">
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <span class="favorite-icon">
-                      <%= link_to post_likes_path(id: like.post.id, post_id: like.post.id), method: :delete, data: {confirm: "削除しますか？"} do %>
-                        <i class="fas fa-heart"></i>
-                      <% end %>
-                    </span>
+              <span class="favorite-icon">
+                <%= link_to post_likes_path(id: like.post.id, post_id: like.post.id), method: :delete, data: {confirm: "削除しますか？"} do %>
+                  <span class="fas fa-heart"></span>
+                <% end %>
+              </span>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
                     <div class="subtitle"><b><%=like.post.title%></b></div>
                     <div class ="title"><b><%=like.post.lyrics%></b></div>
                     <div class ="subtitle"><b><%=like.post.artist%></b></div>
-                    <%# アイコン　%>
-
-                    <%# ここまで　%>
                   </div>
                 </div>
               </div>

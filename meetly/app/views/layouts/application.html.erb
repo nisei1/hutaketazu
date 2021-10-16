@@ -32,7 +32,7 @@
       </button>
         <% if user_signed_in? %>
           <ul class="navbar-nav ml-auto mt-2">
-            <li class="nav-item"><strong class="nav-link"><%= link_to "Meet", posts_path %></strong></li>
+            <li class="nav-item"><strong class="nav-link"><%= link_to "Meet", root_path %></strong></li>
             <li class="nav-item"><strong class="nav-link"><%= link_to "Post", new_post_path %></strong></li>
             <li class="nav-item"><strong class="nav-link"><%= link_to "My page", user_path(current_user) %></strong></li>
             <li class="nav-item"><strong class="nav-link"><%= link_to "Settings", edit_user_path(current_user) %></strong></li>
