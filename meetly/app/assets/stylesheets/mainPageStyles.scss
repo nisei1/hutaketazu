@@ -196,6 +196,10 @@ body {
     color: #000;
 }
 
+.word-break {
+    word-break: break-all;
+}
+
 $distance: 400px;
 @keyframes yes {
     0% {

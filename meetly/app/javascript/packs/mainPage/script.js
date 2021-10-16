@@ -16,7 +16,7 @@ var Person = {
         var random = this.people;
 
         for (let k = 0; k < this.people.length; k++) {
-            this.wrap.append("<div class='person' data-id='" + random[k].id + "'><strong>" + random[k].lyrics + "</strong></div>");
+            this.wrap.append("<div class='person' data-id='" + random[k].id + "'><strong class='word-break'>" + random[k].lyrics + "</strong></div>");
         }
     }
 }
