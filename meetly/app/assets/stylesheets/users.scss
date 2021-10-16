@@ -139,11 +139,11 @@ input[name="tab_item"] {
 }
 //masonry
 
-//flexbox
 .item {
   border-radius: 10px;
+
   padding: 15px;
-  margin: 5px;
+
   text-align: center;
 }
 
@@ -151,11 +151,13 @@ input[name="tab_item"] {
   .flexbox {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    max-height: 800px;
   }
   .item {
-    width: 28%;
+    float:center;
+    width: 33%;
   }
 }
-//flexbox
+
+#trash{
+  
+}
