@@ -39,7 +39,7 @@
 /* body */
 body {
   background: #e9e9e9;
-  color: #5e5e5e;
+  color:black;
   font: 400 87.5%/1.5em 'Open Sans', sans-serif;
 }
 
@@ -65,7 +65,7 @@ h1 {
   background: #fafafa;
   border: none;
   border-bottom: 2px solid #e9e9e9;
-  color: #666;
+  color: #c0c0c0;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   height: 50px;
@@ -121,7 +121,7 @@ h1 {
 
 //flashの色
 .notice{
-  background-color: #666;
+  background-color: rgb(146, 145, 145);
 }
 .alert{
   background-color: #f16272;
@@ -152,6 +152,3 @@ nav .navbar-brand
 .notification{
   background-color: #f16272;
 }
-
-
-
