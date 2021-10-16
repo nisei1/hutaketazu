@@ -11,7 +11,7 @@
   <label class="tab_item" for="programming" style="font-family: 'Scheherazade New', serif;">My lyrics</label>
   <div class="tab_content" id="all_content">
     <section class="section">
-      <div class="grid" data-masonry='{ "itemSelector": ".grid-item" ,"gutter":20 ,"fitWidth": false}'>
+      <div class="grid" data-masonry='{ "itemSelector": ".grid-item" ,"fitWidth": false}'>
         <% @user.likes.each do |like| %>
           <div class="grid-item">
             <div class="card">
