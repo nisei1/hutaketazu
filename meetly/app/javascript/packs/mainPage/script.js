@@ -9,8 +9,15 @@ var Person = {
     wrap: $('#people'),
     people: $('#posts').data('posts'),
     add: function() {
-        var random = this.people[Math.floor(Math.random() * this.people.length)];
-        this.wrap.append("<div class='person' data-id='" + random.id + "'><strong>" + random.lyrics + "</strong></div>");
+        for (let i = this.people.length - 1; i >= 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.people[i], this.people[j]] = [this.people[j], this.people[i]];
+        }
+        var random = this.people;
+
+        for (let k = 0; k < this.people.length; k++) {
+            this.wrap.append("<div class='person' data-id='" + random[k].id + "'><strong>" + random[k].lyrics + "</strong></div>");
+        }
     }
 }
 
@@ -21,7 +28,7 @@ var App = {
     like: function(liked) {
         var animate = liked ? 'animateYes' : 'animateNo';
         var self = this;
-        Person.add();
+        // Person.add();
         if (!this.blocked && liked == true) { //ハートを押されたとき
             this.blocked = true;
             $('.person').eq(0).addClass(animate).one(animationEndEvent, function() {
@@ -59,12 +66,7 @@ App.noButton.on('mousedown', function() {
 });
 
 $(document).ready(function() {
-    Person.people.forEach(function(person) {
-        src = person.lyrics;
-    });
 
     Person.add();
-    Person.add();
-    Person.add();
-    Person.add();
+
 });
