@@ -1,10 +1,7 @@
 
-
-
-
 <% if @post.errors.any? %>
   <div class="notification">
-    <h2><%= pluralize(@post.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
+    <h3><%= pluralize(@post.errors.count, "error") %> prohibited this object from being saved: not successfully</h3>
     <ul>
       <% @post.errors.full_messages.each do |message| %>
       <li><%= message %></li>
@@ -29,7 +26,9 @@
       <%= f.label :lyrics, "歌詞 ※5文字以上入力してください", class: "label" %>
       <%= f.text_area :lyrics, class: "textarea" %>
     </div>
+
     <%= f.submit 'Post', class: "button " %>
   <% end %>
 </div>
+
 

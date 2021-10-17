@@ -16,9 +16,7 @@
           <div class="item">
             <div class="card">
               <span class="favorite-icon">
-                <%= link_to post_likes_path(id: like.post.id, post_id: like.post.id), method: :delete, data: {confirm: "削除しますか？"} do %>
-                  <span class="fas fa-heart"></span>
-                <% end %>
+                <%= link_to post_likes_path(id: like.post.id, post_id: like.post.id), method: :delete, data: {confirm: "削除しますか？"} do %><span class="fas fa-heart"></span><% end %>
               </span>
                 <div class="card-content">
                   <div class="media">

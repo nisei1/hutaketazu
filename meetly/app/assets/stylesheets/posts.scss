@@ -82,6 +82,19 @@ textarea {
   src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
 
+.notification h3{
+  text-align: center;
+}
+.notification li{
+  text-align: center;
+  font-size: 20px;
+}
+
+.notification{
+  padding-bottom: 1px;
+}
+
+
 // body {
 //   padding: 2rem;
 //   background: #f9f9f9;
