@@ -1,0 +1,49 @@
+<section class="hero is-success">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        投稿一覧
+      </h1>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      <% @posts.each do |post| %>
+        <div class="column is-4">
+          <div class="card">
+            <div class="media-content">
+              <div class="title"><%=link_to post.title, post_path(post) %></div>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <div class="title"><%=link_to post.user.username, user_path(post.user) %></div>
+                </div>
+              </div>
+
+              <div class="content">
+                <time><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
+                <% if user_signed_in? && current_user.id != post.user_id %>
+                  <% if current_user.already_liked?(post) %>
+                      <%= link_to post_likes_path(id: post.id, post_id: post.id), method: :delete do %>
+                        <i class="fas fa-heart"></i><%= post.likes.count %>
+                      <% end %>
+                  <% else %>
+                      <%= link_to post_likes_path(post_id: post.id), method: :post do %>
+                        <i class="far fa-heart"></i><%= post.likes.count %>
+                      <% end %>
+                  <% end %>
+                <% else %>
+                  <i class="far fa-heart"></i><%= post.likes.count %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

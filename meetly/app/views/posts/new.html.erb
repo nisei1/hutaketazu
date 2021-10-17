@@ -1,0 +1,34 @@
+
+<% if @post.errors.any? %>
+  <div class="notification">
+    <h3><%= pluralize(@post.errors.count, "error") %> prohibited this object from being saved: not successfully</h3>
+    <ul>
+      <% @post.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class = "post">
+  <%= form_for @post do |f| %>
+    <div class="form">
+      <%= f.label :title, "曲名", class: "label" %>
+      <%= f.text_field :title, class: "input" %>
+    </div>
+
+    <div class="form">
+      <%= f.label :artist, "歌手名(任意)", class: "label" %>
+      <%= f.text_field :artist, class: "input" %>
+    </div>
+
+    <div class="form">
+      <%= f.label :lyrics, "歌詞 ※5文字以上入力してください", class: "label" %>
+      <%= f.text_area :lyrics, class: "textarea" %>
+    </div>
+
+    <%= f.submit 'Post', class: "button " %>
+  <% end %>
+</div>
+
+
