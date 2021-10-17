@@ -38,13 +38,6 @@
             <li class="nav-item"><strong class="nav-link"><%= link_to "Settings", edit_user_path(current_user) %></strong></li>
             <li class="nav-item"><strong class="nav-link"><%= link_to "Log out", destroy_user_session_path, method: :delete %></strong></li>
           </ul>
-        <% else %>
-          <ul class="navbar-nav ml-auto mt-2">
-            <% if current_page?(new_user_session_path) %>
-              <li class="nav-item"><a class="nav-link"><%= link_to "Sign up", new_user_registration_path %></a></li>
-            <% else %>
-              <li class="nav-item"><a class="nav-link"><%= link_to "Sign in", new_user_session_path %></a></li>
-            <% end %>
         <% end %>
       </div>
     </nav>

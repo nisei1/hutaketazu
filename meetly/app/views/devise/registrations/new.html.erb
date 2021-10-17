@@ -5,39 +5,30 @@
     <%= render "devise/shared/error_messages", resource: resource %>
     <div class="form-item"> 
       <%= f.label :username, class:"label" %>
-      <p class="control">
-        <%= f.text_field :username, autofocus: true, autocomplete: "username" , :placeholder => "Username", class: "input"%>
-        <span class="icon"><i class="fas fa-user"></i></span>
-      </p>  
+      <%= f.text_field :username, autofocus: true, autocomplete: "username" , :placeholder => "Username", class: "input"%>
     </div>
     <div class="form-item">
       <%= f.label :email, class: "label" %>
-      <p class="control has-icons-left">
-        <%= f.email_field :email, autocomplete: "email", :placeholder => "Email Address", class: "input" %>
-        <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
-      </p>
+      <%= f.email_field :email, autocomplete: "email", :placeholder => "Email Address", class: "input" %>
     </div>
     <div class="form-item">
       <%= f.label :password, class: "label" %>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <p class="control">
-        <%= f.password_field :password, autocomplete: "new-password", :placeholder => "Password", class: 'input' %>
-        <span class="icon"><i class="fas fa-lock"></i></span>
-      </p>
+      <%= f.password_field :password, autocomplete: "new-password", :placeholder => "Password", class: 'input' %>
     </div>
     <div class="form-item">
       <%= f.label :password_confirmation, class: "label" %>
-      <p class="control">
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", :placeholder => "Confirm Password", class: "input" %>
-        <span class="icon"><i class="fas fa-lock"></i></span>
-      </p>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", :placeholder => "Confirm Password", class: "input" %>
     </div>
     <div class="form-item">
       <div class="actions">
         <%= f.submit "Sign up", class: "button" %>
       </div>
+    </div>
+    <div class="form-footer">
+      <%= render "devise/shared/links" %>
     </div>
   <% end %>
 </div>
