@@ -24,7 +24,7 @@
     <% end %>
 
     <nav class="navbar-expand-md navbar-light bg-light border">
-   
+
       <div class="collapse navbar-collapse" id="navbar">
         <strong class="navbar-brand"  style="font-family: 'Scheherazade New', serif;", href="/">Meetly</strong>
         <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
@@ -37,9 +37,9 @@
             <li class="nav-item"><strong class="nav-link"><%= link_to "My page", user_path(current_user) %></strong></li>
             <li class="nav-item"><strong class="nav-link"><%= link_to "Settings", edit_user_path(current_user) %></strong></li>
             <li class="nav-item"><strong class="nav-link"><%= link_to "Log out", destroy_user_session_path, method: :delete %></strong></li>
-          </ul>        
+          </ul>
         <% else %>
-          <ul class="navbar-nav ml-auto mt-2"> 
+          <ul class="navbar-nav ml-auto mt-2">
             <% if current_page?(new_user_session_path) %>
               <li class="nav-item"><a class="nav-link"><%= link_to "Sign up", new_user_registration_path %></a></li>
             <% else %>
