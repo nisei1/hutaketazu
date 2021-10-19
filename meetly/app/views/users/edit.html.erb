@@ -11,22 +11,32 @@
     </div>
   <% end %>
   <%= form_for @user do |f| %>
-    <div class="field">
-      <% f %>
+    <div class="form-item">
       <%= f.label :username, class:"label" %>
       <%= f.text_field :username, autofocus: true, autocomplete: "email" , :placeholder => "Username", class: "input" %>
     </div>
-    <div class="field">
+    <div class="form-item">
       <%= f.label :email, class: "label" %>
-      <p class="control has-icons-left">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "Email Address", class: "input" %>
-        <span class="icon is-small is-left">
-          <i class="fas fa-envelope"></i>
-        </span>
-      </p>
+      <%= f.email_field :email, autocomplete: "email", :placeholder => "Email Address", class: "input" %>
     </div>
+    <div class="form-item">
+      <%= f.label :Password, class: "label" %>
+      <%= f.password_field :email, autocomplete: "now-password", :placeholder => "Now Password", class: "input" %>
+    </div>
+    <div class="form-item">
+      <%= f.label :password, class: "label" %>
+      <%= f.password_field :email, autocomplete: "new-password", :placeholder => "New Password", class: "input" %>
+    </div>
+    <div class="form-item">
+      <%= f.label :password, class: "label" %>
+      <%= f.password_field :password, autocomplete: "confirm-password", :placeholder => "Confirm Password", class: "input" %>
+    </div>
+    
     <div class="actions">
-      <%= f.submit "Edit", class: "button" %>
+      <%= f.submit "Change my password", class: "button" %>
     </div>
+    <form-footer>
+      </br></br></br></br></br>
+    </form-footer>
   <% end %>
 </div>

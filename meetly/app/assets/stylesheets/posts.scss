@@ -24,7 +24,7 @@ input, textarea {
   margin: 0.5rem 0;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
-  background: darken(#f9f9f9, 10%);
+  background: #f7f6f5;
   color: darken(#f9f9f9, 50%);
   
   &[type=submit] {
@@ -56,19 +56,6 @@ textarea {
     text-align: right;
     padding-right: 0;
   }
-  [name=captcha] {
-    width: 5rem;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    padding-left: 0.5rem;
-    &::placeholder {
-      text-align: center;
-    }
-  }
-
-
-
-
 
 // Generic Styles ;)
 * {
@@ -94,10 +81,3 @@ textarea {
   padding-bottom: 1px;
 }
 
-
-// body {
-//   padding: 2rem;
-//   background: #f9f9f9;
-//   color: #2f2f2f;
-//   font-family: 'Open Sans';
-// }

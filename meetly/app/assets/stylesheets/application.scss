@@ -121,12 +121,12 @@ h1 {
 //ここまでlog in
 
 //flashの色
-.notice{
-  background-color: rgb(146, 145, 145);
+.notification .notice{
+  background-color:#c0c0c0;
   margin-bottom: 0;
 }
-.alert{
-  background-color: #f16272;
+.notification .alert{
+  background-color: #c0c0c0;
   margin-bottom: 0;
 }
 //ここまで
@@ -153,7 +153,15 @@ nav .navbar-brand
   font-family: 'Scheherazade New', serif;
 }
 
-//エラーの時のクラス
-.notification{
-  background-color: #f16272;
+
+.navbar-nav li a.active{
+  color:#fff;
+  background:#dd0000;
+}
+
+.nav-link {
+  background-color: transparent; /* default value */
+}
+.nav-link.selected {
+  background-color: red;
 }

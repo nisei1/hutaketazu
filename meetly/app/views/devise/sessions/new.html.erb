@@ -2,16 +2,16 @@
   <h1>Sign In</h1>
   
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
+    <div class="form-item">
       <%= f.label :email, class: "label" %>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "Email Address", class: "input" %>
     </div>
-    <div class="field">
+    <div class="form-item">
       <%= f.label :password, class: "label" %>
       <%= f.password_field :password, autocomplete: "current-password", :placeholder => "password", class: "input" %>
     </div>
 
-    <div class="field">
+    <div class="form-item">
       <div class="actions">
         <%= f.submit "Sign in", class: "button" %>
       </div>
