@@ -143,25 +143,24 @@ nav .navbar-brand
     text-align:left;
     margin: auto;
     padding: 2%;
+    color: #464444;
 }
 
-.nav-item strong{
+.nav-item .nav-link{
   font-size: medium;
   padding: auto;
   white-space: nowrap;
   line-height:2rem;
   font-family: 'Scheherazade New', serif;
+  color: #464444;
 }
 
 
-.navbar-nav li a.active{
-  color:#fff;
-  background:#dd0000;
+.nav-item.active{
+  text-decoration: underline;
 }
 
-.nav-link {
-  background-color: transparent; /* default value */
-}
-.nav-link.selected {
-  background-color: red;
+.nav-item :hover{
+  color:#999999;
+  text-decoration: none;
 }

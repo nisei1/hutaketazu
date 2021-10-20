@@ -24,19 +24,20 @@
     <% end %>
 
     <nav class="navbar-expand-md navbar-light bg-light border">
-      <div class="collapse navbar-collapse" id="navbar">  
-        <strong class="navbar-brand"  style="font-family: 'Scheherazade New', serif;", href="/">Meetly</strong>
+      <div class="navbar-brand"  style="font-family: 'Scheherazade New', serif;", href="/">Meetly</div>
+          
         <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbar">
         
         <% if user_signed_in? %>
           <ul class="navbar-nav ml-auto mt-2">
-            <li class="active nav-item"><strong class="nav-link"><%= link_to "Meet", root_path %></strong></li>
-            <li class="nav-item"><strong class="nav-link"><%= link_to "Post", new_post_path %></strong></li>
-            <li class="nav-item"><strong class="nav-link"><%= link_to "My page", user_path(current_user) %></strong></li>
-            <li class="nav-item"><strong class="nav-link"><%= link_to "Settings", edit_user_path(current_user) %></strong></li>
-            <li class="nav-item"><strong class="nav-link"><%= link_to "Log out", destroy_user_session_path, method: :delete %></strong></li>
+            <li class="nav-item <%= 'active' if current_page?(root_path) %>"><strong class="nav-link"><%= link_to "Meet", root_path %></strong></li>
+            <li class="nav-item <%= 'active' if current_page?(new_post_path) %>"><strong class="nav-link"><%= link_to "Post", new_post_path %></strong></li>
+            <li class="nav-item <%= 'active' if current_page?(user_path(current_user)) %>"><strong class="nav-link"><%= link_to "My page", user_path(current_user) %></strong></li>
+            <li class="nav-item <%= 'active' if current_page?(edit_user_path(current_user)) %>"><strong class="nav-link"><%= link_to "Settings", edit_user_path(current_user) %></strong></li>
+            <li class="nav-item <%= 'active' if current_page?(destroy_user_session_path) %>"><strong class="nav-link"><%= link_to "Log out", destroy_user_session_path, method: :delete %></strong></li>
           </ul>
         <% end %>
       </div>
