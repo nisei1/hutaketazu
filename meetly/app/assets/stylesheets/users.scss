@@ -69,15 +69,19 @@ input[name="tab_item"] {
   color: #fff;
 }
 
-.subtitle{
-  text-align: center;
-  font-size: medium;
-  line-height: 1.5;
+.title{
+  text-align: left;
+  font-size: 13px;
   padding-left: 30px;
   padding-right:30px;
 }
-
-.title{
+.artist{
+  text-align: left;
+  font-size: 13px;
+  padding-left: 30px;
+  padding-right:30px;
+}
+.lyrics{
   line-height: 1.5;
   text-align: center;
   font-size: x-large;
@@ -88,6 +92,10 @@ input[name="tab_item"] {
 .favorite-icon{
   float: right;
   padding-right:30px;
+}
+
+.favorite-icon :hover{
+  color:#999999;
 }
 
 .trash-icon{

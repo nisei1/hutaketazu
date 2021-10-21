@@ -16,14 +16,14 @@
           <div class="item">
             <div class="card">
               <span class="favorite-icon">
-                <%= link_to post_likes_path(id: like.post.id, post_id: like.post.id), method: :delete, data: {confirm: "削除しますか？"} do %><span class="fas fa-heart"></span><% end %>
+                <%= link_to post_likes_path(id: like.post.id, post_id: like.post.id), method: :delete, data: {confirm: "削除しますか？"} do %><span class="fas fa-heart fa-lg"></span><% end %>
               </span>
                 <div class="card-content">
                   <div class="media">
                     <div class="media-content">
-                    <div class="subtitle"><b><%=like.post.title%></b></div>
-                    <div class ="title"><b><%=like.post.lyrics%></b></div>
-                    <div class ="subtitle"><b><%=like.post.artist%></b></div>
+                    <div class ="lyrics"><b><%=like.post.lyrics%></b></div>
+                    <div class ="artist"><b>ー <%=like.post.artist%></b></div>
+                    <div class="title"><b>ー <%=like.post.title%></b></div> 
                   </div>
                 </div>
               </div>
@@ -44,13 +44,10 @@
               </span>
               <div class="card-content">
                 <div class="media">
-
                   <div class="media-content">
-
-                    <div class = "Subtitle"><b><%= post.title%></b></div>
-                    <div class ="title"><b><%=post.lyrics%></b></div>
-                    <div class ="Subtitle"><b><%=post.artist%></b></div>
-
+                    <div class ="lyrics"><b><%=post.lyrics%></b></div>
+                    <div class ="artist"><b>ー <%=post.artist%></b></div>
+                    <div class = "title"><b>ー <%= post.title%></b></div>
                   </div>
                 </div>
               </div>

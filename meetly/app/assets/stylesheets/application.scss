@@ -14,11 +14,13 @@
  *= require_self
  */
 
-//  @import "bulma";
+//@import "bulma";
 //  .notification:not(:last-child){
 //      margin-bottom: 0;
 //  }
 
+//これがbootstrap
+// @import "bootstrap"; 
 /* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
 
@@ -144,15 +146,24 @@ nav .navbar-brand
     margin: auto;
     padding: 2%;
     color: #464444;
+    font-weight: bolder;
 }
 
-.nav-item .nav-link{
-  font-size: medium;
-  padding: auto;
-  white-space: nowrap;
-  line-height:2rem;
+nav .nav-link{
+  padding-top: 0;
+}
+
+.nav-item a{
   font-family: 'Scheherazade New', serif;
   color: #464444;
+  font-size: medium;
+  font-weight: bolder;
+  padding-top: 0;
+}
+
+nav .nav-item{
+  padding-right: 10px;
+  white-space: nowrap;
 }
 
 
