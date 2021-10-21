@@ -20,7 +20,8 @@
 //  }
 
 //これがbootstrap
-// @import "bootstrap"; 
+//@import "bootstrap";
+@import "bootstrap";
 /* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
 
@@ -139,11 +140,11 @@ nav .navbar-brand
     /* size for brand */
     font-size: xx-large;
     position: auto;
-    width: 100%;
+    //width: 100%;
     left: 10px;
     top: 10px;
     text-align:left;
-    margin: auto;
+    //margin: auto;
     padding: 2%;
     color: #464444;
     font-weight: bolder;
