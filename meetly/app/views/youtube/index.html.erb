@@ -1,0 +1,24 @@
+<h1>Youtube検索</h1>
+<% form_tag :action => :search do %>
+    <fieldset>
+    <legend>検索フォーム</legend>
+    <%= text_field_tag :keyword, @keyword, :style=>"width:300px" %>
+    <%= submit_tag '検索', :style=>"width:100px" %>
+    </fieldset>
+<% end %>
+
+<ul>
+<% if @data != nil %>
+    <% for x, y in @data %>
+        <li><%= x %></li>
+        <li><%= y %></li>
+        <object width="200" height="200">
+        <param name="movie" value="<%= y %>"</param>
+        <param name="wmode" value="transparent">
+        <param name="allowFullScreen" value="false"></param>
+        <embed src="<%= y %>" type="application/x-shockwave-flash" wmode="transparent" 
+        width="425" height="336" allowfullscreen="false"></embed>
+        </object>
+    <% end %>
+<% end %>
+</ul>
