@@ -89,18 +89,23 @@ input[name="tab_item"] {
   padding-right:30px;
 }
 
-.favorite-icon{
+.favorite-icon .fas{
   float: right;
   padding-right:30px;
+  color:#2f2f2f;
 }
 
 .favorite-icon :hover{
   color:#999999;
 }
 
-.trash-icon{
+.trash-icon .fas{
   float: right;
   padding-right:30px;
+  color:#2f2f2f;
+}
+.trash-icon :hover{
+  color:#999999;
 }
 
 .card{
@@ -145,7 +150,7 @@ input[name="tab_item"] {
   text-align: center;
 }
 
-@media ( min-width : 600px ){
+@media ( min-width : 800px ){
   .flexbox {
     display: flex;
     flex-wrap: wrap;

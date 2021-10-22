@@ -21,9 +21,16 @@
                 <div class="card-content">
                   <div class="media">
                     <div class="media-content">
+                    <div class="title"><b><%=like.post.title%></b></div>
                     <div class ="lyrics"><b><%=like.post.lyrics%></b></div>
-                    <div class ="artist"><b>ー <%=like.post.artist%></b></div>
-                    <div class="title"><b>ー <%=like.post.title%></b></div> 
+                    <div class ="artist">
+                      <% if like.post.artist.present? then %>
+                        <b>ー <%=like.post.artist%></b>
+                      <% else %>
+                        <b>ー 不明なアーティスト</b>
+                      <% end %>
+                    </div>
+                     
                   </div>
                 </div>
               </div>
@@ -45,9 +52,16 @@
               <div class="card-content">
                 <div class="media">
                   <div class="media-content">
+                    <div class = "title"><b><%= post.title%></b></div>
                     <div class ="lyrics"><b><%=post.lyrics%></b></div>
-                    <div class ="artist"><b>ー <%=post.artist%></b></div>
-                    <div class = "title"><b>ー <%= post.title%></b></div>
+                    <div class ="artist">
+                      <% if post.artist.present? then %>
+                        <b>ー <%=post.artist%></b>  
+                      <% else %>
+                        <b>ー 不明なアーティスト</b>
+                      <% end %>
+                    </div>
+                    
                   </div>
                 </div>
               </div>

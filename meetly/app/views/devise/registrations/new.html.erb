@@ -22,12 +22,14 @@
       <%= f.label :password_confirmation, class: "label" %>
       <%= f.password_field :password_confirmation, autocomplete: "new-password", :placeholder => "Confirm Password", class: "input" %>
     </div>
+    </br>
     <div class="form-item">
       <div class="actions">
         <%= f.submit "Sign up", class: "button" %>
       </div>
     </div>
     <div class="form-footer">
+      </br></br>
       <%= render "devise/shared/links" %>
     </div>
   <% end %>
