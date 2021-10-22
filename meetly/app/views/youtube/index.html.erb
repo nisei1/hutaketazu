@@ -1,7 +1,9 @@
 <h1>Youtube検索</h1>
-<% form_tag :action => :search do %>
-    <fieldset>
-    <legend>検索フォーム</legend>
+<%# form_tag :action => :search do %>
+<%= form_tag({controller:"youtube",action:"search"}, method: :get) do %>
+    <!--<fieldset>
+    <legend>検索フォーム</legend>-->
+    <h2>検索フォーム</h2>
     <%= text_field_tag :keyword, @keyword, :style=>"width:300px" %>
     <%= submit_tag '検索', :style=>"width:100px" %>
     </fieldset>
