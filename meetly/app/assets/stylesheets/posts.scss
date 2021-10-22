@@ -6,15 +6,18 @@
 /* Colors */  
 /* ---------------------------------------- */ 
 // Colours
-$green: #84AD47;
-$red: #AD4747;
-$blue: #4784AD;
+
 
 .post {
   width: 50%;
   margin: 10% auto;
   min-width: 9rem;
 }
+.form{
+  margin-top: 2%;
+  font-size: 16px;
+}
+
   
 input, textarea {
   float: left;
@@ -26,48 +29,27 @@ input, textarea {
   border-radius: 0.3rem;
   background: #f7f6f5;
   color: darken(#f9f9f9, 50%);
+}
   
-  &[type=submit] {
-    background: $green;
-    color: #fff;
+.button {
+    background-color: #666666;
     width: auto;
     float: right;
+    color:#f7f6f5;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .button :hover{
+    background-color:#2f2f2f;
   }
 
-  &::placeholder {
-    color: darken(#4784AD, 50%);
-  }
 
-  &.error {
-    background: $red;
-    color: #fff;
-    &::placeholder {
-      color: darken($red, 60%);
-    }
-  }
-}
 textarea {
   height: 10rem;
 }
-  input[name=question] {
-    width: 4rem;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    text-align: right;
-    padding-right: 0;
-  }
 
-// Generic Styles ;)
-* {
-  box-sizing: border-box;
-}
 
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-}
+
 
 .notification h3{
   text-align: center;
