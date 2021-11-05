@@ -1,11 +1,7 @@
 require_relative 'boot'
 
 require 'rails/all'
-require 'google/apis/youtube_v3'
 
-youtube = Google::Apis::YoutubeV3::YouTubeService.new
-youtube.key = YOUTUBE_API_KEY
-youtube_search_list = youtube.list_searches("id,snippet", type: "video", q: "キーワード", max_results: 50)
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -21,5 +17,3 @@ module Meetly
     # the framework and any gems in your application.
   end
 end
-
-
