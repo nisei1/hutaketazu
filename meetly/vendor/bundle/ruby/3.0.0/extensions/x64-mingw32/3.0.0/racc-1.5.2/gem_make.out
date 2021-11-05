@@ -1,5 +1,5 @@
 current directory: C:/Users/integ/hutaketazu/meetly/vendor/bundle/ruby/3.0.0/gems/racc-1.5.2/ext/racc/cparse
-C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20211013-20284-t0wxeg.rb extconf.rb
+C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20211020-12140-kdqe70.rb extconf.rb
 checking for rb_ary_subseq()... yes
 creating Makefile
 
@@ -14,4 +14,4 @@ linking shared-object racc/cparse.so
 
 current directory: C:/Users/integ/hutaketazu/meetly/vendor/bundle/ruby/3.0.0/gems/racc-1.5.2/ext/racc/cparse
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 cparse.so ./.gem.20211013-20284-ebrrl1/racc
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20211020-12140-xm5k0b/racc

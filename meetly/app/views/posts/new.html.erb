@@ -16,19 +16,29 @@
       <%= f.label :title, "曲名", class: "label" %>
       <%= f.text_field :title, class: "input" %>
     </div>
-
+    </br></br>
     <div class="form">
       <%= f.label :artist, "歌手名(任意)", class: "label" %>
       <%= f.text_field :artist, class: "input" %>
     </div>
-
+    </br></br>
     <div class="form">
-      <%= f.label :lyrics, "歌詞 ※5文字以上入力してください", class: "label" %>
+      <%= f.label :lyrics, "歌詞", class: "label" %>
       <%= f.text_area :lyrics, class: "textarea" %>
     </div>
-
     <%= f.submit 'Post', class: "button " %>
   <% end %>
 </div>
 
+<script type="text/javascript">
+  window.onload = function() {
+    let path = location.pathname;
+      let pattern = /^.*\/new.*$/
 
+      // URLが正しければ変更は不要
+      if(path.match(pattern)) return;
+
+      // URLを変更
+      history.replaceState('', '', `${ path }/new`)
+};
+</script>

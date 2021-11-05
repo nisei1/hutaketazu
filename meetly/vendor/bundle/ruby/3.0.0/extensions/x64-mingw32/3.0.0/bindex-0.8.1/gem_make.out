@@ -1,5 +1,5 @@
 current directory: C:/Users/integ/hutaketazu/meetly/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
-C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20211013-20284-nipbyj.rb extconf.rb
+C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20211020-12140-q5la2e.rb extconf.rb
 creating Makefile
 
 current directory: C:/Users/integ/hutaketazu/meetly/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
@@ -13,4 +13,4 @@ linking shared-object skiptrace/internal/cruby.so
 
 current directory: C:/Users/integ/hutaketazu/meetly/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 cruby.so ./.gem.20211013-20284-cuoyjg/skiptrace/internal
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20211020-12140-pnpzim/skiptrace/internal

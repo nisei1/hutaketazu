@@ -69,15 +69,19 @@ input[name="tab_item"] {
   color: #fff;
 }
 
-.subtitle{
+.title{
   text-align: center;
-  font-size: medium;
-  line-height: 1.5;
+  font-size: 18px;
   padding-left: 30px;
   padding-right:30px;
 }
-
-.title{
+.artist{
+  text-align: right;
+  font-size: 15px;
+  padding-left: 30px;
+  padding-right:30px;
+}
+.lyrics{
   line-height: 1.5;
   text-align: center;
   font-size: x-large;
@@ -85,14 +89,23 @@ input[name="tab_item"] {
   padding-right:30px;
 }
 
-.favorite-icon{
+.favorite-icon .fas{
   float: right;
   padding-right:30px;
+  color:#2f2f2f;
 }
 
-.trash-icon{
+.favorite-icon :hover{
+  color:#999999;
+}
+
+.trash-icon .fas{
   float: right;
   padding-right:30px;
+  color:#2f2f2f;
+}
+.trash-icon :hover{
+  color:#999999;
 }
 
 .card{
@@ -137,7 +150,7 @@ input[name="tab_item"] {
   text-align: center;
 }
 
-@media ( min-width : 600px ){
+@media ( min-width : 800px ){
   .flexbox {
     display: flex;
     flex-wrap: wrap;
